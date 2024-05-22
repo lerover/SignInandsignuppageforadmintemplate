@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+    /* hue saturation lightness alpha */
+
+    --primary-color: hsla(203, 100%, 13%, 1);
+    --secondary-color: hsla(330, 87%, 17%, 1);
+    --fruit-color: tomato;
+}
+
+* {
+    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* start left sidebar */
+
+/* start left sidebar */
+.leftsidebars{
+    background-color: black;
+    /* color: #fff; */
+
+}
+
+.nav-item.nav-categories{
+    color: white;
+    opacity: .9;
+
+    margin: 10px 0;
+}
+
+
+.nav-item .sidebarlinks{
+    opacity: .9;
+    position: relative;
+}
+
+.nav-item .sidebarlinks:hover{
+    opacity: 1;
+    background-color: #666;
+}
+
+.nav-item .sidebarlinks .mores{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.sidebarlinks.currents{
+    background-color: #333;
+    box-shadow: 1px 0 5px #222;
+}
+/* end left sidebar */
+
+/* start notify & user account  */
+.dropdown{
+    position: relative;
+}                 
+  
+  .dropdowns .dropdown-content{
+    min-width: 230px;
+    background-color: #f6f6f6;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    z-index: 10;
+  display: none;
+   
+  }
+  
+  .dropdowns .dropdown-content a{
+    color: #000;
+    display: block;
+    padding: 10px;
+  }
+  
+  .dropdowns .dropdown-content a:hover{
+    background-color: #ddd;
+  }
+  
+  .dropdowns .dropdown-content .show{
+    display: block;
+  }
+  
+  .navbar .close-btns{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    line-height:22px;
+    border-radius: 50%;
+    outline: none;
+    border:none;
+  
+    margin-right: 10px;
+    
+    display: none;
+    
+  }
+  
+  @media(max-width:768px){
+    .navbar .close-btns{
+      display:block;
+    }
+  }
+  /* end notify & user account */
