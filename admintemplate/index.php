@@ -1,3 +1,8 @@
+<?php
+   if($_COOKIE['email']=== NULL && $_COOKIE['password']===NULL){
+        header('location:../signuppage.php');
+   };
+?>
 
 <!doctype html>
 <html>
@@ -143,7 +148,7 @@
                             </div>
                             <!-- end left side bar -->
 
-                            <!-- start top side bar -->
+                            <!-- start top nav bar -->
                             <div class="col-lg-10 col-md-9 fixed-top ms-auto topnavbars">
 
                                 <div class="row">
@@ -160,32 +165,34 @@
                                         <!-- end quick search -->
 
                                         <!-- start notify & user account -->
-                                            <ul class="navbar-nav me-5">                                        
+                                            <ul class="navbar-nav pe-5 me-5">                                        
                                                 <!-- notify -->
                                                 <li class="nav-item dropdowns me-3">
-                                                    <a href="javascript:void(0);" onclick='dropbtn(event)'><i class="fas fa-bell"></i>
+                                                    <a href="javascript:void(0);" id="dropbtn" onclick="dropbtn(event)"><i class="fas fa-bell"></i>
                                                         <span class="badge bg-danger">5+</span>
                                                     </a>
                                   
-                                                    <div class="dropdown-content mydropdowns">
-                                                        <h6>Alert Center</h6>
-                                    
+                                                    <div class="dropdown-content mydropdowns py-3 shadow rounded">
+                                                        <h6 class="ms-2">Alert Center</h6>
+                                                   
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <div class="me-3">
-                                                                <i class="fas fa-file-alt"></i>
+                                                                 <i class="fas fa-file-alt"></i>
                                                             </div>
-                                                            <p class="small text-muted">21 May 2024</p>
-                                                            <i>A new memeber created.</i>
+                                                            <div>
+                                                                <p class="small text-muted">21 May 2024</p>
+                                                                <i>A new memeber created.</i>
+                                                            </div>
                                                         </a>
-                                                    
-                                    
+                                                                          
                                                         <a href="javascript:void(0);" class="d-flex">
                                                             <div class="me-3">
-                                                                <i class="fas fa-file-alt"></i>
+                                                                 <i class="fas fa-file-alt"></i>
                                                             </div>
-                                                            <p class="small text-muted">21 May 2024</p>
-                                                            <i>A new memeber created.</i>
-                                                            <div></div>
+                                                            <div>
+                                                                <p class="small text-muted">21 May 2024</p>
+                                                                <i>A new memeber created.</i>
+                                                            </div>
                                                         </a>
                                     
                                                                           
@@ -193,8 +200,10 @@
                                                             <div class="me-3">
                                                                  <i class="fas fa-file-alt"></i>
                                                             </div>
-                                                            <p class="small text-muted">21 May 2024</p>
-                                                            <i>A new memeber created.</i>
+                                                            <div>
+                                                                <p class="small text-muted">21 May 2024</p>
+                                                                <i>A new memeber created.</i>
+                                                            </div>
                                                         </a>
                                                     
                                                     </div>
@@ -253,7 +262,118 @@
 
         <!-- start content area -->
         <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-md-9 ms-auto">
 
+                        <!-- start shortcut area -->
+                        <div class="row pt-md-5 mt-md-5">
+                            <div class="col-lg-3 col-md-6 mb-2">
+                                <div class="card shadow py-2" style="border-left: 3px solid steelblue;">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6 class="text-primary text-xs fw-bold text-uppercase mb-1">Sales (Monthly)</h6>
+                                                <p class="h5 text-muted">$ 50,000</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 mb-2">
+                                <div class="card shadow py-2" style="border-left: 3px solid green;">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6 class="text-primary text-xs fw-bold text-uppercase mb-1">Rental Fees (Annual)</h6>
+                                                <p class="h5 text-muted">$ 400,000</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-dollar-sign fa-2x text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 mb-2">
+                                <div class="card shadow py-2" style="border-left: 3px solid skyblue;">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6 class="text-primary text-xs fw-bold text-uppercase mb-1">Debit Collect</h6>
+                                                <div class="row ">
+                                                    <p class="col-auto">60%</p>
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 13px;">
+                                                            <div class="progress-bar bg-info" style="width: 60%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-clipboard-list fa-2x text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 mb-2">
+                                <div class="card shadow py-2" style="border-left: 3px solid orange;">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6 class="text-primary text-xs fw-bold text-uppercase mb-1">Request Message</h6>
+                                                <p class="h5 text-muted">25</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-comments fa-2x text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end shortcut area -->
+
+                        <!-- start carousel area -->
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Sales</h6>
+
+                                        <div class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner p-3">
+                                                <div class="carousel-item active">
+                                                    <div class="d-flex">
+                                                        <h3>$ 58,664 </h3>
+                                                        <h3 class="text-danger ">+3.2%</h3>
+                                                    </div>
+
+                                                    <div>
+                                                        <p class="fw-bold text-small">Revenue <span class="text-muted">($1527M last month)</span></p>
+                                                    </div>
+
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm">
+                                                        <i class="fas fa-calendar-alt me-1"></i> Jan
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end carousel area -->
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- end content area -->
                                     

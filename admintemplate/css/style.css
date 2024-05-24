@@ -83,7 +83,7 @@ a{
     transform: translateX(-50%);
     
     z-index: 10;
-  display: none;
+    display: none;
    
   }
   
@@ -97,7 +97,7 @@ a{
     background-color: #ddd;
   }
   
-  .dropdowns .dropdown-content .show{
+  .dropdowns .dropdown-content.show{
     display: block;
   }
   
@@ -122,3 +122,13 @@ a{
     }
   }
   /* end notify & user account */
+  /* end navbar */
+
+  /* start content area */
+  /* start shortcut area */
+  .border-left-primarys{
+    border: 3px solid black;
+  }
+
+  /* end shortcut area */
+  /* end content area */
